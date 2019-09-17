@@ -16,7 +16,7 @@
 
         <section class="content-header">
           <h1>
-            Painel de controle
+            Painel de Controle
 
             @if(@isset($urlAtual))
             
@@ -35,7 +35,7 @@
             @if(@isset($urlAtual))
               <li class="active"> {{$urlAtual}} </li>
             @else
-              <li class="active"> Página Principal </li>          
+              <li class="active"> Painel de Controle  </li>          
             @endisset
 
           </ol>

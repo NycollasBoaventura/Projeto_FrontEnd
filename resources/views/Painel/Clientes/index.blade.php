@@ -1,5 +1,6 @@
 @extends('Painel.Layout.index')
 
+
 @section('content')
 
     <section class="content">
@@ -29,21 +30,17 @@
                                     <th>Nome</th>
                                     <th>E-mail</th>
                                     <th>Cadastro</th>
-                                    <th>Ação</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-
-                                @foreach($clientes- as $cliente-)
+                                <tr>
+                                </tbody>
+                                @foreach($clientes as $clientes)
+                                </tr>
                                     <tr>
                                         <td>{{ $clientes->id }}</td>
                                         <td>{{ $clientes->name }}</td>
                                         <td>{{ $clientes->email }}</td>
                                         <td>{{ $clientes->created_at->diffForHumans() }}</td>
-                                        <td>
-                                            <a class="btn btn-warning fa fa-edit"></a>
-                                            <a class="btn btn-danger fa fa-trash"></a>
-                                        </td>
                                     </tr>
                                 @endforeach
 
@@ -54,20 +51,16 @@
                                     <th>Nome</th>
                                     <th>E-mail</th>
                                     <th>Cadastrro</th>
-                                    <th>Ação</th>
                                 </tr>
                                 </tfoot>
                             </table>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </section>
     </div>
-      </div>
-      
+</div>
     </section>
 
 @endsection

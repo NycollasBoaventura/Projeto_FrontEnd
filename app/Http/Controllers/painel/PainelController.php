@@ -14,13 +14,13 @@ class PainelController extends Controller
      * @return void
      */
     public $request;
-    public $Clientes;
+    public $clientes;
 
-    public function __construct(Request $request, User $Clientes)
+    public function __construct(Request $request, User $clientes)
     {
         $this->middleware('auth');
         $this->request = $request;
-        $this->clientes = $Clientes;
+        $this->clientes = $clientes;
     }
 
     /**
