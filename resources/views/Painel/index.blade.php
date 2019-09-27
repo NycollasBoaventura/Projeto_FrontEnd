@@ -25,4 +25,3 @@
     </section>
 
 @endsection
-    

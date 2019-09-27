@@ -1,4 +1,4 @@
-    <?php
+<?php
 
 
     Route::get('/', function () {
@@ -12,4 +12,4 @@
 
     Route::get('/Painel', 'Painel\PainelController@index')->name('painel.index');
     Route::get('/Painel/Clientes', 'Painel\PainelController@viewClientes')->name('painel.Clientes.index');
-
+    
