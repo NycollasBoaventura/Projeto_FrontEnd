@@ -1,23 +1,75 @@
-@extends('layouts.app')
+@extends('Painel.Layout.index')
+
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+    <section class="content">
+
+        <div class="row">
+                <div class="col-xs-12">
+
+                    <div class="box ">
+                        <div class="box-header"> 
+                            <h3 class="box-title"> Tabela de Clientes </h3>
+
+                            <div class ="box-tools">
+                                <div class="input-group input-group-sm" style="width: 160px;">
+                                    <input type="text" name="table_search" class="form-controll pull-right" placeholder="Procurar por Id">
+                                    <div class="input-group-btn">
+                                        <button type="submit" class="btn btn-default"><i class="fa fa-procurar por Id"></i></button>
+                                        
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    @endif
+                        <!-- /.box-header -->
+                        <div class="box-body table-responsive no-padding">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Nome</th>
+                                    <th>Rg</th>
+                                    <th>cpf</th>
+                                    <th>E-mail</th>
+                                    <th>Recurso</th>
+                                    
+                        
+                                 <th>Cadastro</th>
+                                  
+                                </tr>
+                                </thead>
+                                <tr>
+                                </tbody>
+                                @foreach($Client as $cliente)
+                                </tr>
+                                    <tr>
+                                        <td>{{ $cliente->id }}</td>
+                                        <td>{{ $cliente->name }}</td>
+                                        <td>{{ $cliente->Rg }}</td>
+                                        <td>{{ $cliente->Cpf }}</td>
+                                        <td>{{ $cliente->email }}</td>
+                                        <td>{{ $cliente->Recursos }}</td>
+                                        <td>{{ $cliente->created_at->diffForHumans() }}</td>
+                                    </tr>
+                                @endforeach
 
-                    You are logged in!
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                               
+
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 </div>
+    </section>
+
 @endsection
+

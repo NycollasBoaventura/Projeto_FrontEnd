@@ -34,7 +34,7 @@
                 </a>
                 <ul class="treeview-menu">
                 <li class="active"><a href="{{ route('painel.index') }}"><i class="fa fa-home"></i>Página Principal</a></li>
-                <li class="active"><a href="{{ route('painel.index') }}"><i class="fa fa-users"></i>Página Cliente</a></li>
+                <li class="active"><a href="{{ route('painel.Clientes.index') }}"><i class="fa fa-users"></i>Página Cliente</a></li>
                 </ul>
               </li>
 

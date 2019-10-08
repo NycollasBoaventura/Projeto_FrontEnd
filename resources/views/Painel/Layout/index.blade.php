@@ -1,7 +1,7 @@
   <!DOCTYPE html>
 
   <html>
-
+  
     @includeif('Painel.Layout.head')
     
     <body class="hold-transition skin-blue sidebar-mini">
@@ -31,6 +31,7 @@
         </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            
           
             @if(@isset($urlAtual))
               <li class="active"> {{$urlAtual}} </li>
