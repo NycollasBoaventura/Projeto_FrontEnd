@@ -5,8 +5,9 @@ use App\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use GuzzleHttp\Client;
 class PainelController extends Controller
+
 {
     /**
      * Create a new controller instance.
@@ -14,13 +15,13 @@ class PainelController extends Controller
      * @return void
      */
     public $request;
-    public $clientes;
+    public $Clientes;
 
-    public function __construct(Request $request, User $clientes)
+    public function __construct(Request $request, User $Clientes)
     {
         $this->middleware('auth');
         $this->request = $request;
-        $this->clientes = $clientes;
+        $this->clientes = $Clientes;
     }
 
     /**
@@ -35,14 +36,20 @@ class PainelController extends Controller
     }
     public function viewClientes()
     {
-        //Controle de url
-        $user = Auth()->User();
-        $uri = $this->request->route()->uri();
-        $exploder = explode('/', $uri);
-        $urlAtual = $exploder[1];
+        $client = new Client([
 
-        $clientes = $this->clientes->all();
+            'base_uri' => 'http://192.168.0.37:8080/produtos/',
+            
+            'timeout' => 30,
+    
+    
+        ]);
+    
+        $response = $client->request('GET', 'lista');
+        $response_array = json_decode($response->getBody()->getContents());
+        
+       $user = Auth() ->User();
+       return view('Painel.Clientes.index', compact('user','response_array'));
 
-        return view('Painel.Clientes.index', compact('user', '$urlAtual', 'clientes' ));
     }
 }

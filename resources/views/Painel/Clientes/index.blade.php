@@ -13,10 +13,11 @@
                             <h3 class="box-title"> Tabela de Clientes </h3>
 
                             <div class ="box-tools">
-                                <div class="input-group input-group-sm" style="width: 150px;">
-                                    <input type="text" name="table_search" class="form-controll pull-right" placeholder="Search">
+                                <div class="input-group input-group-sm" style="width: 160px;">
+                                    <input type="text" name="table_search" class="form-controll pull-right" placeholder="Procurar por Id">
                                     <div class="input-group-btn">
-                                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                        <button type="submit" class="btn btn-default"><i class="fa fa-procurar por Id"></i></button>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -26,31 +27,32 @@
                             <table class="table table-hover">
                                 <thead>
                                 <tr>
-                                    <th>#</th>
+                                    <th>idProduto</th>
                                     <th>Nome</th>
-                                    <th>E-mail</th>
-                                    <th>Cadastro</th>
+                                    <th>descricao</th>
+                                    
+                                    
+                        
+                                  
                                 </tr>
                                 </thead>
                                 <tr>
                                 </tbody>
-                                @foreach($clientes as $clientes)
+                                @foreach($response_array as $cliente)
                                 </tr>
                                     <tr>
-                                        <td>{{ $clientes->id }}</td>
-                                        <td>{{ $clientes->name }}</td>
-                                        <td>{{ $clientes->email }}</td>
-                                        <td>{{ $clientes->created_at->diffForHumans() }}</td>
-                                    </tr>
+                                        <td>{{ $cliente->idProduto }}</td>
+                                        <td>{{ $cliente->nome }}</td>
+                                        <td>{{ $cliente->descricao }}</td>
+                                        
+
                                 @endforeach
 
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                    <th>#</th>
-                                    <th>Nome</th>
-                                    <th>E-mail</th>
-                                    <th>Cadastrro</th>
+                               
+
                                 </tr>
                                 </tfoot>
                             </table>
