@@ -10,7 +10,7 @@
 
                     <div class="box ">
                         <div class="box-header"> 
-                            <h3 class="box-title"> Tabela de Clientes </h3>
+                            <h3 class="box-title"> Tabela de Produtos </h3>
 
                             <div class ="box-tools">
                                 <div class="input-group input-group-sm" style="width: 160px;">
@@ -32,6 +32,7 @@
                                     <th>descricao</th>
                                     
                                     
+                                    
                         
                                   
                                 </tr>
@@ -44,6 +45,12 @@
                                         <td>{{ $cliente->idProduto }}</td>
                                         <td>{{ $cliente->nome }}</td>
                                         <td>{{ $cliente->descricao }}</td>
+                                        <td><a> Apagar Produto </a></td>
+                                        
+                                        
+
+
+
                                         
 
                                 @endforeach

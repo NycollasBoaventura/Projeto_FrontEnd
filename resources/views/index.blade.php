@@ -31,8 +31,9 @@
                                     <th>Nome</th>
                                     <th>Rg</th>
                                     <th>cpf</th>
-                                    <th>E-mail</th>
-                                    <th>Recurso</th>
+                                   
+                                 
+
                                     
                         
                                  <th>Cadastro</th>
@@ -48,8 +49,8 @@
                                         <td>{{ $cliente->name }}</td>
                                         <td>{{ $cliente->Rg }}</td>
                                         <td>{{ $cliente->Cpf }}</td>
-                                        <td>{{ $cliente->email }}</td>
-                                        <td>{{ $cliente->Recursos }}</td>
+                                
+                    
                                         <td>{{ $cliente->created_at->diffForHumans() }}</td>
                                     </tr>
                                 @endforeach
