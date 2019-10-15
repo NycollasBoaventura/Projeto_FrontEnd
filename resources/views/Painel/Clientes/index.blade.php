@@ -45,7 +45,11 @@
                                         <td>{{ $cliente->idProduto }}</td>
                                         <td>{{ $cliente->nome }}</td>
                                         <td>{{ $cliente->descricao }}</td>
-                                        <td><a> Apagar Produto </a></td>
+                                        <td><a href='http://192.168.0.25:8080/produtos/excluir/{{ $cliente->idProduto }}'>Excluir</a>
+                                        
+                                       
+
+    
                                         
                                         
 
