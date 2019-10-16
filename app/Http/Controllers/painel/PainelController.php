@@ -38,7 +38,7 @@ class PainelController extends Controller
     {
         $client = new Client([
 
-            'base_uri' => 'http://192.168.0.25:8080/produtos/',
+            'base_uri' => 'http://192.168.0.50:8080/produtos/',
             
             'timeout' => 30,
     
@@ -60,7 +60,7 @@ class PainelController extends Controller
     public function deleteClientes($id)
     {
         $client = New Client([
-            'base_uri'=> 'http://192.168.0.25:8080/produtos/',
+            'base_uri'=> 'http://192.168.0.50:8080/produtos/',
             'timeout'=>30,
         ]);
         $response = $client->delete('DELETE', 'excluir/{id}');
