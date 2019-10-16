@@ -30,11 +30,7 @@
                                     <th>idProduto</th>
                                     <th>Nome</th>
                                     <th>descricao</th>
-                                    
-                                    
-                                    
-                        
-                                  
+                                                                                                                                                                    
                                 </tr>
                                 </thead>
                                 <tr>
@@ -46,16 +42,7 @@
                                         <td>{{ $cliente->nome }}</td>
                                         <td>{{ $cliente->descricao }}</td>
                                         <td><a href='http://192.168.0.53:8080/produtos/excluir/{{ $cliente->idProduto }}'>Excluir</a>
-                                       
-
-    
-                                        
-                                        
-
-
-
-                                        
-
+                                                                                
                                 @endforeach
 
                                 </tbody>
