@@ -29,8 +29,8 @@
                                 <tr>
                                     <th>idProduto</th>
                                     <th>Nome</th>
-                                    <th>cpf</th>
-                                    <th>rg</th>
+                                    <th>descricao</th>
+                                    
                                     
                                     
                         
@@ -42,11 +42,10 @@
                                 @foreach($response_array as $cliente)
                                 </tr>
                                     <tr>
-                                        <td>{{ $cliente->idcliente }}</td>
+                                        <td>{{ $cliente->idProduto }}</td>
                                         <td>{{ $cliente->nome }}</td>
-                                        <td>{{ $cliente->cpf }}</td>
-                                        <td>{{ $cliente->rg }}</td>
-                                        <td><a href='http://192.168.0.25:8080/clientes/excluir/{{ $cliente->idcliente }}'>Excluir</a>
+                                        <td>{{ $cliente->descricao }}</td>
+                                        <td><a href='http://192.168.0.25:8080/produtos/excluir/{{ $cliente->idProduto }}'>Excluir</a>
                                        
 
     
@@ -77,3 +76,4 @@
     </section>
 
 @endsection
+

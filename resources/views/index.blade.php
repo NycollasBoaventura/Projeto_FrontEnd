@@ -10,7 +10,7 @@
 
                     <div class="box ">
                         <div class="box-header"> 
-                            <h3 class="box-title"> Tabela de Clientes </h3>
+                            <h3 class="box-title"> Tabela de Produtos </h3>
 
                             <div class ="box-tools">
                                 <div class="input-group input-group-sm" style="width: 160px;">
@@ -27,32 +27,30 @@
                             <table class="table table-hover">
                                 <thead>
                                 <tr>
-                                    <th>Id</th>
+                                    <th>idProduto</th>
                                     <th>Nome</th>
-                                    <th>Rg</th>
-                                    <th>cpf</th>
-                                   
-                                 
-
-                                    
-                        
-                                 <th>Cadastro</th>
-                                  
+                                    <th>descricao</th>
                                 </tr>
                                 </thead>
                                 <tr>
                                 </tbody>
-                                @foreach($Client as $cliente)
+                                @foreach($response_array as $cliente)
                                 </tr>
                                     <tr>
-                                        <td>{{ $cliente->id }}</td>
-                                        <td>{{ $cliente->name }}</td>
-                                        <td>{{ $cliente->Rg }}</td>
-                                        <td>{{ $cliente->Cpf }}</td>
-                                
-                    
-                                        <td>{{ $cliente->created_at->diffForHumans() }}</td>
-                                    </tr>
+                                        <td>{{ $cliente->idProduto }}</td>
+                                        <td>{{ $cliente->nome }}</td>
+                                        <td>{{ $cliente->descricao }}</td>
+                                        <td><a href='http://192.168.0.25:8080/produtos/excluir/{{ $cliente->idProduto }}'>Excluir</a>
+                                       
+
+    
+                                        
+                                        
+
+
+
+                                        
+
                                 @endforeach
 
                                 </tbody>
