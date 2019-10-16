@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\painel;
+namespace App\Http\Controllers\produtos;
 use App\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
-class PainelController extends Controller
+class ProdutosController extends Controller
 
 {
     /**
@@ -15,13 +15,13 @@ class PainelController extends Controller
      * @return void
      */
     public $request;
-    public $Clientes;
+    public $Produtos;
 
-    public function __construct(Request $request, User $Clientes)
+    public function __construct(Request $request, User $Produtos)
     {
         $this->middleware('auth');
         $this->request = $request;
-        $this->clientes = $Clientes;
+        $this->produtos = $Produtos;
     }
 
     /**
@@ -34,11 +34,11 @@ class PainelController extends Controller
         $user = Auth() ->User();
         return view('Painel.index', compact('user'));
     }
-    public function viewClientes()
+    public function viewProdutos()
     {
         $client = new Client([
 
-            'base_uri' => 'http://192.168.0.53:8080/clientes/',
+            'base_uri' => 'http://192.168.0.53:8080/produtos/',
             
             'timeout' => 30,
     
@@ -54,19 +54,20 @@ class PainelController extends Controller
         }*/
        //return json_decode($response->getBody()->getContents());
        $user = Auth() ->User();
-       return view('Painel.Clientes.index', compact('user','response_array'));
+       return view('Painel.Produtos.index', compact('user','response_array'));
 
     }
-    public function deleteClientes($id)
+    public function deleteProdutos($id)
     {
         $client = New Client([
-            'base_uri'=> 'http://192.168.0.53:8080/clientes/',
+            'base_uri'=> 'http://192.168.0.53:8080/produtos/',
             'timeout'=>30,
         ]);
         $response = $client->delete('GET', 'excluir/{id}');
     
 
         $user = Auth() ->User();
-        return view('Painel.Clientes.index', compact('user','response'));
+        return view('Painel.Produtos.index', compact('user','response'));
     }
 }
+
