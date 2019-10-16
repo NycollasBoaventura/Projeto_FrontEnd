@@ -12,5 +12,5 @@
 
     Route::get('/Painel', 'Painel\PainelController@index')->name('painel.index');
     Route::get('/Painel/Clientes', 'Painel\PainelController@viewClientes')->name('painel.Clientes.index');
-    Route::post('/Painel/Clientes/excluir/{$id}','Painel\PainelController@deleteClientes')->name('painel.clientes.delete');
+    Route::get('/Painel/Clientes/excluir/{$id}','Painel\PainelController@deleteClientes')->name('painel.clientes.delete');
     

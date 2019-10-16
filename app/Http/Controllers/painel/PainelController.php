@@ -63,7 +63,7 @@ class PainelController extends Controller
             'base_uri'=> 'http://192.168.0.50:8080/produtos/',
             'timeout'=>30,
         ]);
-        $response = $client->delete('DELETE', 'excluir/{id}');
+        $response = $client->delete('GET', 'excluir/{id}');
     
 
         $user = Auth() ->User();
