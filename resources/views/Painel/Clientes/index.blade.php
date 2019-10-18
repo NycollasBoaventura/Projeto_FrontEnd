@@ -13,7 +13,7 @@
                             <h3 class="box-title"> Tabela de clientes </h3>
 
                             <div class ="box-tools">
-                                <div class="input-group input-group-sm" style="width: 160px;">
+                                <div class="input-group input-group-sm" style="width: 160   px;">
                                     <input type="text" name="table_search" class="form-controll pull-right" placeholder="Procurar por Id">
                                     <div class="input-group-btn">
                                         <button type="submit" class="btn btn-default"><i class="fa fa-procurar por Id"></i></button>
@@ -27,7 +27,7 @@
                             <table class="table table-hover">
                                 <thead>
                                 <tr>
-                                    <th>idProduto</th>
+                                    <th>idCliente</th>
                                     <th>Nome</th>
                                     <th>cpf</th>
                                     <th>rg</th>
@@ -46,8 +46,9 @@
                                         <td>{{ $cliente->nome }}</td>
                                         <td>{{ $cliente->cpf }}</td>
                                         <td>{{ $cliente->rg }}</td>
-                                        <td><a href='http://192.168.0.53:8080/clientes/excluir/{{ $cliente->idcliente }}'>Excluir</a>
-                                       
+                                        <td><a href='http://192.168.0.50:8080/clientes/excluir/{{ $cliente->idcliente }}'><i class="fa fa-trash"></i></a>
+                                        <td><a href='http://192.168.0.50:8080/clientes/editar/{{ $cliente->idcliente }}'><i class="fa fa-edit"></i></a>
+                                    
 
     
                                         

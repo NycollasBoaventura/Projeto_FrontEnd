@@ -41,8 +41,8 @@
                                         <td>{{ $cliente->idProduto }}</td>
                                         <td>{{ $cliente->nome }}</td>
                                         <td>{{ $cliente->descricao }}</td>
-                                        <td><a href='http://192.168.0.53:8080/produtos/excluir/{{ $cliente->idProduto }}'>Excluir</a>
-                                                                                
+                                        <td><a href='http://192.168.0.50:8080/produtos/excluir/{{ $cliente->idProduto }}'><i class="fa fa-trash"></i></a>
+                                        <td><a href='http://192.168.0.50:8080/produtos/atualizar/{{ $cliente->idProduto }}'><i class="fa fa-edit"></i></a>                                                                  
                                 @endforeach
 
                                 </tbody>
