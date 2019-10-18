@@ -10,7 +10,7 @@
 
                     <div class="box ">
                         <div class="box-header"> 
-                            <h3 class="box-title"> Tabela de Produtos </h3>
+                            <h3 class="box-title"> Tabela de Clientes </h3>
 
                             <div class ="box-tools">
                                 <div class="input-group input-group-sm" style="width: 160px;">
@@ -46,7 +46,7 @@
                                         <td>{{ $cliente->nome }}</td>
                                         <td>{{ $cliente->cpf }}</td>
                                         <td>{{ $cliente->rg }}</td>
-                                        <td><a href='http://192.168.0.25:8080/clientes/excluir/{{ $cliente->idcliente }}'>Excluir</a>
+                                        <td><a href='http://192.168.0.50:8080/clientes/excluir/{{ $cliente->idcliente }}'>Excluir</a>
                                        
 
     
