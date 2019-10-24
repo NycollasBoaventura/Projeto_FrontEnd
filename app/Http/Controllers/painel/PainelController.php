@@ -60,7 +60,7 @@ class PainelController extends Controller
     public function deleteClientes($id)
     {
         $client = New Client([
-            'base_uri'=> 'http://192.168.0.50:8080/clientes/',
+            'base_uri'=> 'http://192.168.0.54:8080/clientes/',
             'timeout'=>30,
         ]);
         $response = $client->delete('GET', 'excluir/{id}');
@@ -72,7 +72,7 @@ class PainelController extends Controller
     public function editarClientes($id)
     {
     $client = New Client([
-        'base_uri'=> 'http://192.168.0.50:8080/clientes/',
+        'base_uri'=> 'http://192.168.0.54:8080/clientes/',
         'timeout'=>30,
     ]);      
     $response = $client->update('GET','atualizar/{id}');

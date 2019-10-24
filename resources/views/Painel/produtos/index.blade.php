@@ -35,14 +35,14 @@
                                 </thead>
                                 <tr>
                                 </tbody>
-                                @foreach($response_array as $cliente)
+                                @foreach($response_array as $produtos)
                                 </tr>
                                     <tr>
-                                        <td>{{ $cliente->idProduto }}</td>
-                                        <td>{{ $cliente->nome }}</td>
-                                        <td>{{ $cliente->descricao }}</td>
-                                        <td><a href='http://192.168.0.50:8080/produtos/excluir/{{ $cliente->idProduto }}'><i class="fa fa-trash"></i></a>
-                                        <td><a href='http://192.168.0.50:8080/produtos/atualizar/{{ $cliente->idProduto }}'><i class="fa fa-edit"></i></a>                                                                  
+                                        <td>{{ $produtos->idProduto }}</td>
+                                        <td>{{ $produtos->nome }}</td>
+                                        <td>{{ $produtos->descricao }}</td>
+                                        <td><a href='http://192.168.0.54:8080/produtos/excluir/{{ $produtos->idProduto }}'><i class="fa fa-trash"></i></a>
+                                        <td><a href='http://192.168.0.54:8080/produtos/atualizar/{{ $produtos->idProduto }}'><i class="fa fa-edit"></i></a>                                                                  
                                 @endforeach
 
                                 </tbody>
