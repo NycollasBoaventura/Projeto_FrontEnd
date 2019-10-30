@@ -38,14 +38,14 @@ class PainelController extends Controller
     {
         $client = new Client([
 
-            'base_uri' => 'http://192.168.0.54:8080/clientes/',
+            'base_uri' => 'http://192.168.0.54:8080/clientes/lista',
             
             'timeout' => 30,
     
     
         ]);
     
-        $response = $client->request('GET', 'lista');
+        $response = $client->request('GET');
         $response_array = json_decode($response->getBody()->getContents());
         //return $response_array;
        /* foreach($response_array as $row){
@@ -60,10 +60,10 @@ class PainelController extends Controller
     public function deleteClientes($id)
     {
         $client = New Client([
-            'base_uri'=> 'http://192.168.0.54:8080/clientes/',
+            'base_uri'=> 'http://192.168.0.54:8080/clientes/excluir/{id}',
             'timeout'=>30,
         ]);
-        $response = $client->delete('GET', 'excluir/{id}');
+        $response = $client->delete('GET');
     
 
         $user = Auth() ->User();
@@ -76,12 +76,15 @@ class PainelController extends Controller
         'timeout'=>30,
     ]);      
     $response = $client->update('GET','atualizar/{id}');
-        $client->Idcliente = "";
         $client->nome = "";
         $client->cpf = "";
         $client->rg = "";
         $categorias = Categoria::all();
-        return view('Painel.Cliente.index', compact('user','response'));
+        return view('Painel.Clientes.formulario', compact('user','response'));
 
     }
+    public function formulario(){
+        
+    }
+    
 }

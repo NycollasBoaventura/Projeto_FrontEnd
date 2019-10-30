@@ -41,8 +41,8 @@
                                         <td>{{ $produtos->idProduto }}</td>
                                         <td>{{ $produtos->nome }}</td>
                                         <td>{{ $produtos->descricao }}</td>
-                                        <td><a href='http://192.168.0.54:8080/produtos/excluir/{{ $produtos->idProduto }}'><i class="fa fa-trash"></i></a>
-                                        <td><a href='http://192.168.0.54:8080/produtos/atualizar/{{ $produtos->idProduto }}'><i class="fa fa-edit"></i></a>                                                                  
+                                        <td><a href='http://192.168.0.52:8080/produtos/excluir/{{ $produtos->idProduto }}'><i class="fa fa-trash"></i></a>
+                                        <td><a href='http://192.168.0.52-:8080/produtos/atualizar/{{ $produtos->idProduto }}'><i class="fa fa-edit"></i></a>                                                                  
                                 @endforeach
 
                                 </tbody>

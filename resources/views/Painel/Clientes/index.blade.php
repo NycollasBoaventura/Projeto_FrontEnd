@@ -47,7 +47,7 @@
                                         <td>{{ $cliente->cpf }}</td>
                                         <td>{{ $cliente->rg }}</td>
                                         <td><a href='http://192.168.0.54:8080/clientes/excluir/{{ $cliente->idcliente }}'><i class="fa fa-trash"></i></a>
-                                        <td><a href='http://192.168.0.54:8080/clientes/atualizar/{{ $cliente->idcliente }}'><i class="fa fa-edit"></i></a>
+                                        <td><a href='formulario'><i class="fa fa-edit"></i></a>
                                     
 
     
